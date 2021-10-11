@@ -45,15 +45,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
 
-    <?php if ($server_uri === '/'): ?>
-        <link rel="stylesheet" href="<?= $uri ?>/css/top.css">
-    <?php endif; ?>
-
+    <!-- 各ページcss -->
+    <link rel="stylesheet" href="<?= $uri ?>/css/top.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/news.css">
-    
-    <?php if ($slug === 'contact'): ?>
-        <link rel="stylesheet" href="<?= $uri ?>/css/contact.css">
-    <?php endif; ?>
+    <link rel="stylesheet" href="<?= $uri ?>/css/contact.css">
     
     <?php wp_head(); ?>
 </head>
@@ -65,10 +60,10 @@
                         <img src="<?=$uri?>/img/common/logo.svg" class="logo" alt="logo">
                     </a>
                     <ul class="pc-navi">
-                        <li><a href="<?=$site_url;?>/"><span class="event">EVENTS</span>イベント</a></li>
-                        <li><a href="<?=$site_url;?>/"><span class="groumet">GOURMETS</span>グルメ</a></li>
-                        <li><a href="<?=$site_url;?>/"><span class="news">NEWS</span>ニュース</a></li>
-                        <li><a href="<?=$site_url;?>/"><span class="feature">FEATURES</span>特集記事</a></li>
+                        <li><a href="<?=$site_url;?>/"><span class="eventLink">EVENTS</span>イベント</a></li>
+                        <li><a href="<?=$site_url;?>/"><span class="groumetLink">GOURMETS</span>グルメ</a></li>
+                        <li><a href="<?=$site_url;?>/"><span class="newsLink">NEWS</span>ニュース</a></li>
+                        <li><a href="<?=$site_url;?>/"><span class="featureLink">FEATURES</span>特集記事</a></li>
                     </ul>
                     <ul class="icon">
                         <li>

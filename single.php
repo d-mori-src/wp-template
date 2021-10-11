@@ -3,8 +3,7 @@
 <main class="news">
     <?php if (have_posts()): ?>
         <?php while (have_posts()): the_post(); ?>
-            <h1><?php the_title(); ?></h1>
-            <?php the_content(); ?>
+            <h1><?php the_field('title_copy'); ?></h1>
             <p><?php the_time(get_option('date_format')); ?></p>
         <?php endwhile; ?>
     <?php else: ?>
@@ -13,8 +12,7 @@
 
     <?php wp_reset_postdata(); ?>
 
-    <a href="<?=$site_url;?>/news">一覧へ戻る</a>
+    <a href="<?=$site_url;?>/">一覧へ戻る</a>
 </main>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

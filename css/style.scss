@@ -4,7 +4,7 @@
 /* font-family: 'Noto Sans JP', sans-serif; */
 /* font-family: 'Josefin Sans', sans-serif; */
 
-*, h1 {
+*, h1, h2, h3, h4, h5, h6, p, a {
     font-family: 'Noto Sans JP', sans-serif;
     margin: 0;
     padding: 0;
@@ -15,6 +15,14 @@ body {
     color: #474645;
     background: #FDFDFD;
 }
+
+// mainタグ共通処理
+@media screen and (min-width:1024px) {
+    main {
+        display: flex;
+    }
+}
+
 a {
     text-decoration: none;
     letter-spacing: 1.5px;
@@ -28,46 +36,57 @@ ul li {
     list-style: none;
     letter-spacing: 1.5px;
 }
-// currentクラスはactiveの場合自動で入る
-.current {
-    color: red;
-}
-.prevLink::before {
-    content: "";
-    display: inline-block;
-    background-image: url("../img/common/prev.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    right: 4px;
-    top: 6px;
-}
-.nextLink::after {
-    content: "";
-    display: inline-block;
-    background-image: url("../img/common/next.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    left: 4px;
-    top: 6px;
-}
 
-.instaWrapper {
-    width: calc(100% - 50px);
-    margin: 0 auto;
-    .sbi_photo_wrap {
-        margin: 8px;
+// currentクラスはactiveの場合自動で入る
+.pagenation {
+    text-align: center;
+    .page-numbers {
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        font-family: 'EB Garamond', serif;
+        color: rgba(70,70,70,.5);
+        width: 40px;
+        height: 40px;
+        padding: 10px 0 0 0;
+        border: 1px solid #EBEBEB;
+        border-radius: 50%;
+    }
+    .current {
+        color: #fff;
+        border: 1px solid #25AEBE;
+        background: #25AEBE;
+    }
+    .prevLink::before {
+        content: "";
+        display: inline-block;
+        background-image: url("../img/common/prev.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        position: relative;
+        right: 10px;
+        top: 12px;
+    }
+    .nextLink::after {
+        content: "";
+        display: inline-block;
+        background-image: url("../img/common/next.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        position: relative;
+        left: 10px;
+        top: 12px;
+    }
+    
+    .screen-reader-text {
+        display: none;
     }
 }
 
-.screen-reader-text {
-    display: none;
-}
 
 // categoryのactiveクラス
 .current-cat {
@@ -76,19 +95,27 @@ ul li {
     }
 }
 
-.like {
-    display: flex;
-    align-items: center;
-    .wpulike-heart .wp_ulike_general_class {
-        box-shadow: none !important;
-        border-radius: 0 !important;
-        margin:  0 24px 0 0 !important;
-        padding:  0 !important;
-    }
-    .wpulike-heart .count-box {
-        font-size: 16px !important;
-        color: #666 !important;
-        font-weight: 500 !important;
-        padding: 0 !important;
-    }
-}
+// .instaWrapper {
+//     width: calc(100% - 50px);
+//     margin: 0 auto;
+//     .sbi_photo_wrap {
+//         margin: 8px;
+//     }
+// }
+
+// .like {
+//     display: flex;
+//     align-items: center;
+//     .wpulike-heart .wp_ulike_general_class {
+//         box-shadow: none !important;
+//         border-radius: 0 !important;
+//         margin:  0 24px 0 0 !important;
+//         padding:  0 !important;
+//     }
+//     .wpulike-heart .count-box {
+//         font-size: 16px !important;
+//         color: #666 !important;
+//         font-weight: 500 !important;
+//         padding: 0 !important;
+//     }
+// }

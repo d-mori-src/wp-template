@@ -14,6 +14,12 @@ add_shortcode('img', 'img_func');
   return get_template_directory_uri().'/img/';
 }
 
+add_action( 'init' , 'my_remove_post_editor_support' );
+function my_remove_post_editor_support() {
+ // remove_post_type_support( 'post', 'title' ); //タイトル
+ remove_post_type_support( 'post', 'editor' ); //本文
+}
+
 // カスタム投稿タイプの追加
 // add_action( 'init', 'create_post_type' );
 // function create_post_type() {

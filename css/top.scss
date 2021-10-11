@@ -1,3 +1,75 @@
 .top {
-    margin: 56px 0 0 0;
+    margin: 100px 0 0 0;
+
+    .newsWrapper {
+        padding: 0 20px;
+        h3 {
+            font-size: 14px;
+            font-weight: 400;
+            img {
+                height: 10px;
+                margin: 0 14px 0 0;
+            }
+            &::after {
+                content: "";
+                display: block;
+                height: 4px;
+                margin: 6px 0 20px;
+                background-image: url(../img/common/underline.svg);
+                background-repeat: repeat-x;
+                background-size: contain;
+            }
+        }
+        .newsItems {
+            .newsItem {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 0 20px 0;
+                padding: 0 0 20px 0;
+                border-bottom: 1px solid #EBEBEB;
+                .newsItemImage {
+                    width: 100px;
+                    height: 68px;
+                    object-fit: cover;
+                }
+                .newsItemText {
+                    width: 220px;
+                    .title {
+                        display: block;
+                        font-size: 12px;
+                        line-height: 1.7;
+                        margin: 0 0 16px 0;
+                    }
+                    .newsItemUnder {
+                        display: flex;
+                        justify-content: space-between;
+                        .left-newsItemUnder {
+                            p {
+                                font-size: 10px;
+                                &::before {
+                                    content: "●";
+                                    margin: 0 4px 0 0;
+                                }
+                            }
+                            .event_tag::before { color: #99BB05; }
+                            .gourmets_tag::before { color: #EE9E30; }
+                            .shop_tag::before { color: #2974ED; }
+                            .sweets_tag::before { color: #22C9DE; }
+                            .news_tag::before { color: #25AEBE; }
+                            .family_tag::before { color: #E66616; }
+                            .lunch_tag::before { color: #F4D217; }
+                            .weekend_tag::before { color: #AB76CC; }
+                            .features_tag::before { color: #BB7777; }
+                        }
+                        .right-newsItemUnder {
+                            .timestamp {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

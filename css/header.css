@@ -80,16 +80,16 @@ header .innerHeader ul.icon li a span {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 10px;
   }
-  header .innerHeader ul.pc-navi li a .event {
+  header .innerHeader ul.pc-navi li a .eventLink {
     color: #99BB05;
   }
-  header .innerHeader ul.pc-navi li a .groumet {
+  header .innerHeader ul.pc-navi li a .groumetLink {
     color: #EE9E30;
   }
-  header .innerHeader ul.pc-navi li a .news {
+  header .innerHeader ul.pc-navi li a .newsLink {
     color: #25AEBE;
   }
-  header .innerHeader ul.pc-navi li a .feature {
+  header .innerHeader ul.pc-navi li a .featureLink {
     color: #BB7777;
   }
   header .innerHeader ul.icon {
