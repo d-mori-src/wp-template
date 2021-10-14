@@ -32,8 +32,6 @@ header .innerHeader ul.icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  right: 60px;
 }
 
 header .innerHeader ul.icon li {

@@ -1,6 +1,16 @@
 @charset "UTF-8";
+.hero {
+  margin: 56px auto 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    margin: 56px auto 48px;
+  }
+}
+
 .top {
-  margin: 100px 0 0 0;
+  margin: 20px auto 0;
 }
 
 .top .newsWrapper {
@@ -52,6 +62,7 @@
 
 .top .newsWrapper .newsItems .newsItem .newsItemText .title {
   display: block;
+  text-align: justify;
   font-size: 12px;
   line-height: 1.7;
   margin: 0 0 16px 0;
@@ -113,5 +124,90 @@
 
 .top .newsWrapper .newsItems .newsItem .newsItemText .newsItemUnder .right-newsItemUnder .timestamp {
   font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .top .newsWrapper {
+    width: 640px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .top .newsWrapper .newsItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    margin: 0 0 24px 0;
+  }
+  .top .newsWrapper .newsItems .newsItem {
+    display: block;
+    width: 30%;
+    margin: 0 0 40px 0;
+    padding: 0;
+    border-bottom: none;
+  }
+  .top .newsWrapper .newsItems .newsItem .newsItemImage {
+    width: 100%;
+    height: 120px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0 0 12px 0;
+  }
+  .top .newsWrapper .newsItems .newsItem .newsItemText {
+    width: 100%;
+  }
+  .top .newsWrapper .newsItems .newsItem .newsItemText .title {
+    margin: 0 0 12px 0;
+  }
+  .top .newsWrapper .newsItems::after {
+    display: block;
+    content: "";
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .top .newsWrapper {
+    width: 600px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .top .newsWrapper h3 {
+    font-size: 16px;
+  }
+  .top .newsWrapper h3 img {
+    height: 12px;
+    margin: 0 16px 0 0;
+  }
+  .top .newsWrapper h3::after {
+    height: 4px;
+    margin: 8px 0 24px;
+  }
+  .top .newsWrapper .newsItems .newsItem {
+    width: 30%;
+    margin: 0 0 40px 0;
+    padding: 0;
+    border-bottom: none;
+  }
+  .top .newsWrapper .newsItems::after {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .top .newsWrapper {
+    width: 640px;
+  }
+  .top .newsWrapper .newsItems .newsItem {
+    width: 200px;
+  }
+  .top .newsWrapper .newsItems::after {
+    width: 200px;
+  }
 }
 /*# sourceMappingURL=top.css.map */

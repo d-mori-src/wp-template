@@ -1,0 +1,83 @@
+@charset "UTF-8";
+#nav {
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  background: #ffffff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#hamburger {
+  display: block;
+  position: relative;
+  width: 24px;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 1002;
+  margin: 0 0 0 24px;
+}
+
+#hamburger .innerHamburger::after {
+  content: "メニュー";
+  position: absolute;
+  left: -7px;
+  bottom: 0;
+  font-size: 10px;
+  width: 48px;
+}
+
+.inner_line {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+#line1 {
+  top: 0;
+}
+
+#line2 {
+  top: 7px;
+}
+
+#line3 {
+  bottom: 17px;
+}
+
+.in {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.line_1, .line_2, .line_3 {
+  position: relative;
+  background: #000000;
+}
+
+.line_1 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 8px !important;
+}
+
+.line_2 {
+  opacity: 0;
+}
+
+.line_3 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: -4px !important;
+}
+/*# sourceMappingURL=hamburger.css.map */

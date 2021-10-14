@@ -4,25 +4,13 @@
 /* font-family: 'Noto Sans JP', sans-serif; */
 /* font-family: 'Josefin Sans', sans-serif; */
 
+// 初期化
 *, h1, h2, h3, h4, h5, h6, p, a {
     font-family: 'Noto Sans JP', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    overflow-x: hidden;
-    color: #474645;
-    background: #FDFDFD;
-}
-
-// mainタグ共通処理
-@media screen and (min-width:1024px) {
-    main {
-        display: flex;
-    }
-}
-
 a {
     text-decoration: none;
     letter-spacing: 1.5px;
@@ -35,6 +23,46 @@ a {
 ul li {
     list-style: none;
     letter-spacing: 1.5px;
+}
+
+// レイアウト共通
+body {
+    overflow-x: hidden;
+    color: #474645;
+    background: #FDFDFD;
+    .sp-tab-newShop {
+        display: block;
+    }
+    // mainタグ共通処理
+    main {
+        aside.sidebar {
+            display: none;
+        }
+    }
+    @media screen and (min-width:1024px) {
+        .sp-tab-newShop {
+            display: none;
+        }
+        main {
+            display: flex;
+            justify-content: space-between;
+            width: 880px;
+            margin: 0 auto;
+            aside.sidebar {
+                display: block;
+                width: 24%;
+                border: 1px dashed #eee;
+            }
+        }
+    }
+    @media screen and (min-width:1120px) {
+        main {
+            width: 960px;
+            aside.sidebar {
+                width: 240px;
+            }
+        }
+    }
 }
 
 // currentクラスはactiveの場合自動で入る
@@ -81,12 +109,28 @@ ul li {
         left: 10px;
         top: 12px;
     }
-    
     .screen-reader-text {
         display: none;
     }
+    @media screen and (min-width:1024px) {
+        .page-numbers {
+            font-size: 20px;
+            width: 48px;
+            height: 48px;
+            padding: 12px 0 0 0;
+        }
+        .prevLink::before {
+            width: 36px;
+            height: 36px;
+            right: 40px;
+        }
+        .nextLink::after {
+            width: 36px;
+            height: 36px;
+            left: 40px;
+        }
+    }
 }
-
 
 // categoryのactiveクラス
 .current-cat {

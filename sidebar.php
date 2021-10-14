@@ -7,6 +7,6 @@
   $server_uri_trimed = substr($server_uri, 0, strcspn($server_uri,'?'));
 ?>
 
-<section>
-  PCサイドバー
-</section>
+<aside class="sidebar">
+  <?php include('inc/new_shop.php'); ?>
+</aside>

@@ -1,4 +1,100 @@
 .news {
-  margin: 56px 0 0 0;
+  margin: 104px auto 0;
+}
+
+.news .newsDetail {
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.news .newsDetail h1 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0 0 16px 0;
+}
+
+.news .newsDetail .event_tag {
+  color: #99BB05;
+}
+
+.news .newsDetail .gourmets_tag {
+  color: #EE9E30;
+}
+
+.news .newsDetail .shop_tag {
+  color: #2974ED;
+}
+
+.news .newsDetail .sweets_tag {
+  color: #22C9DE;
+}
+
+.news .newsDetail .news_tag {
+  color: #25AEBE;
+}
+
+.news .newsDetail .family_tag {
+  color: #E66616;
+}
+
+.news .newsDetail .lunch_tag {
+  color: #F4D217;
+}
+
+.news .newsDetail .weekend_tag {
+  color: #AB76CC;
+}
+
+.news .newsDetail .features_tag {
+  color: #BB7777;
+}
+
+.news .newsDetail .lead {
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0 0 16px 0;
+}
+
+.news .newsDetail .imageEdge {
+  margin: 0 0 16px 0;
+  border: 1px solid #eee;
+  background: #fff;
+}
+
+.news .newsDetail .imageEdge .newsItemImage {
+  width: 100%;
+  padding: 8px;
+}
+
+.news .newsDetail .lead {
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0 0 16px 0;
+}
+
+.news .newsDetail .timestamp {
+  font-size: 10px;
+  margin: 0 0 16px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .news .newsDetail {
+    width: 640px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .news .newsDetail {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .news .newsDetail {
+    width: 640px;
+  }
 }
 /*# sourceMappingURL=news.css.map */

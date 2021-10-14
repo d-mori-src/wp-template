@@ -22,5 +22,7 @@
             </footer>
         </div>
     <?php wp_footer(); ?>
+
+    <script src="<?= $uri ?>/js/main.js"></script>
     </body>
 </html>

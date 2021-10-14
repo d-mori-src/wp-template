@@ -27,12 +27,11 @@
     <link rel="stylesheet" href="<?= $uri ?>/css/normalize.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/style.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/bottomSlidein.css">
-    <link rel="stylesheet" href="<?= $uri ?>/css/drawer.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/header.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/footer.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/sidebar.css">
+    <link rel="stylesheet" href="<?= $uri ?>/css/hamburger.css">
     <script src="<?= $uri ?>/js/jquery.3.4.1.js"></script>
-    <script src="<?= $uri ?>/js/main.js"></script>
     <link href="<?= $uri ?>/js/slick-theme.css" rel="stylesheet" type="text/css">
     <link href="<?= $uri ?>/js/slick.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="<?= $uri ?>/js/slick.min.js"></script>
@@ -47,8 +46,12 @@
 
     <!-- 各ページcss -->
     <link rel="stylesheet" href="<?= $uri ?>/css/top.css">
+    <link rel="stylesheet" href="<?= $uri ?>/css/search.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/news.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/contact.css">
+
+    <!-- 各コンポーネントcss -->
+    <link rel="stylesheet" href="<?= $uri ?>/css/new_shop.css">
     
     <?php wp_head(); ?>
 </head>
@@ -65,6 +68,9 @@
                         <li><a href="<?=$site_url;?>/"><span class="newsLink">NEWS</span>ニュース</a></li>
                         <li><a href="<?=$site_url;?>/"><span class="featureLink">FEATURES</span>特集記事</a></li>
                     </ul>
+
+                    <?php get_search_form(); ?>
+
                     <ul class="icon">
                         <li>
                             <a href="<?=$site_url;?>/">
@@ -78,8 +84,16 @@
                                 <span>おでかけ</span>
                             </a>
                         </li>
+                        <div id="hamburger">
+                            <div class="innerHamburger">
+                                <span class="inner_line" id="line1"></span>
+                                <span class="inner_line" id="line2"></span>
+                                <span class="inner_line" id="line3"></span>
+                            </div>
+                        </div>
                     </ul>
 
+                    <!-- activeにする場合の例 -->
                     <!-- <ul>
                         <li><a href="<?=$site_url;?>" class="<?=$active = ($server_uri === '/') ? 'active' : ''; ?>">HOME</a></li>
                         <li><a href="<?=$site_url;?>/news" class="<?=$active = ($server_uri === '/news/') ? 'active' : ''; ?>">NEWS</a></li>
@@ -87,3 +101,7 @@
                     </ul> -->
                 </div>
             </header>
+
+            <nav id="nav">
+                ナビメニューが入ります。
+            </nav>

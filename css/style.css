@@ -9,20 +9,6 @@
           box-sizing: border-box;
 }
 
-body {
-  overflow-x: hidden;
-  color: #474645;
-  background: #FDFDFD;
-}
-
-@media screen and (min-width: 1024px) {
-  main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
 a {
   text-decoration: none;
   letter-spacing: 1.5px;
@@ -38,6 +24,50 @@ a:hover {
 ul li {
   list-style: none;
   letter-spacing: 1.5px;
+}
+
+body {
+  overflow-x: hidden;
+  color: #474645;
+  background: #FDFDFD;
+}
+
+body .sp-tab-newShop {
+  display: block;
+}
+
+body main aside.sidebar {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  body .sp-tab-newShop {
+    display: none;
+  }
+  body main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 880px;
+    margin: 0 auto;
+  }
+  body main aside.sidebar {
+    display: block;
+    width: 24%;
+    border: 1px dashed #eee;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  body main {
+    width: 960px;
+  }
+  body main aside.sidebar {
+    width: 240px;
+  }
 }
 
 .pagenation {
@@ -91,6 +121,25 @@ ul li {
 
 .pagenation .screen-reader-text {
   display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .pagenation .page-numbers {
+    font-size: 20px;
+    width: 48px;
+    height: 48px;
+    padding: 12px 0 0 0;
+  }
+  .pagenation .prevLink::before {
+    width: 36px;
+    height: 36px;
+    right: 40px;
+  }
+  .pagenation .nextLink::after {
+    width: 36px;
+    height: 36px;
+    left: 40px;
+  }
 }
 
 .current-cat a {

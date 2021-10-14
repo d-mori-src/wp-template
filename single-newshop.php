@@ -1,3 +1,4 @@
+<!-- single.php 流用　カテゴリーのみ削除 -->
 <?php get_header(); ?>
 
 <main class="news">
@@ -5,8 +6,7 @@
         <section class="newsDetail">
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): the_post(); ?>
-                    <?php $cat = get_the_category(); $cat = $cat[0]; ?>
-                    <h1 class="<?=$cat->category_nicename; ?>"><?php the_field('title_copy'); ?></h1>
+                    <h1 style="color: #99BB05"><?php the_field('title_copy'); ?></h1>
                     <div class="imageEdge">
                         <img src="<?php the_field('image'); ?>" class="newsItemImage" />
                     </div>

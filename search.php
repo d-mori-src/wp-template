@@ -1,33 +1,18 @@
+<!-- index.phpからコピー/若干修正 -->
 <?php
     $uri = get_theme_file_uri(); 
     $site_url = site_url();
-
-    $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-    $args = [
-        'post_type' => 'post', // カスタム投稿名
-        'paged' => $paged,
-        'posts_per_page' => 9, // 表示する数
-    ];
-    $wp_query = new WP_Query($args);
 ?>
 
 <?php get_header(); ?>
 
-<section class="hero">
-    First View
-</section>
-
-<section class="sp-tab-newShop">
-    <?php include('inc/new_shop.php'); ?>
-</section>
-
-<main class="top">
+<main class="top search">
     <article>
         <section class="newsWrapper">
-            <h3><img src="<?=$uri?>/img/common/check.svg" alt="">新着情報</h3>
+            <h3><img src="<?=$uri?>/img/common/check.svg" alt=""><?php the_search_query(); ?> の検索結果</h3>
             <div class="newsItems">
-                <?php if ($wp_query->have_posts()): ?>
-                    <?php while ($wp_query->have_posts()): $wp_query->the_post(); ?>
+                <?php if (have_posts()): ?>
+                    <?php while (have_posts()): the_post(); ?>
                         <div class="newsItem">
                             <a href="<?php the_permalink(); ?>">
                                 <img src="<?php the_field('image'); ?>" class="newsItemImage" />
@@ -53,30 +38,11 @@
                     <p>まだ投稿がありません。</p>
                 <?php endif; ?>
             </div>
-
-            <div class="pagenation">
-                <?php previous_posts_link(''); ?>
-                <?php
-                    if ($wp_query->max_num_pages > 1) {
-                        $limitnum = 999999999;
-                        echo paginate_links(
-                            [
-                                'base'         => str_replace($limitnum, '%#%', esc_url(get_pagenum_link($limitnum))),
-                                'format'       => '',
-                                'current'      => max(1, get_query_var('paged')),
-                                'total'        => $wp_query->max_num_pages,
-                                'prev_next'    => false,
-                                'type'         => 'plain',
-                            ]
-                        );
-                    }
-                ?>
-                <?php next_posts_link(''); ?>
-            </div>
         </section>
     </article>
 
     <?php get_sidebar(); ?><!-- 1024px以上で表示　スマホ・タブレットは表示なし -->
 </main>
 
+<?php include ('inc/drawer.php');  ?>
 <?php get_footer(); ?>
