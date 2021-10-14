@@ -14,7 +14,7 @@
 <?php get_header(); ?>
 
 <section class="hero">
-    First View
+    TOP - First View
 </section>
 
 <section class="sp-tab-newShop">
@@ -23,8 +23,8 @@
 
 <main class="top">
     <article>
-        <section class="newsWrapper">
-            <h3><img src="<?=$uri?>/img/common/check.svg" alt="">新着情報</h3>
+        <h3 class="headTitle"><img src="<?=$uri?>/img/common/check.svg" alt="">新着情報</h3>
+        <section class="news">
             <div class="newsItems">
                 <?php if ($wp_query->have_posts()): ?>
                     <?php while ($wp_query->have_posts()): $wp_query->the_post(); ?>
@@ -74,9 +74,12 @@
                 <?php next_posts_link(''); ?>
             </div>
         </section>
-    </article>
-
-    <?php get_sidebar(); ?><!-- 1024px以上で表示　スマホ・タブレットは表示なし -->
+    </article> 
+    <?php get_sidebar(); ?>
 </main>
+
+<section class="sp-tab-newShop">
+    <?php include('inc/special.php'); ?>
+</section>
 
 <?php get_footer(); ?>

@@ -1,4 +1,3 @@
-<!-- index.phpからコピー/若干修正 -->
 <?php
     $uri = get_theme_file_uri(); 
     $site_url = site_url();
@@ -8,8 +7,8 @@
 
 <main class="top search">
     <article>
-        <section class="newsWrapper">
-            <h3><img src="<?=$uri?>/img/common/check.svg" alt=""><?php the_search_query(); ?> の検索結果</h3>
+        <h3 class="headTitle"><img src="<?=$uri?>/img/common/check.svg" alt=""><?php the_search_query(); ?> の検索結果</h3>
+        <section class="news">
             <div class="newsItems">
                 <?php if (have_posts()): ?>
                     <?php while (have_posts()): the_post(); ?>
@@ -38,11 +37,10 @@
                     <p>まだ投稿がありません。</p>
                 <?php endif; ?>
             </div>
-        </section>
+        </section>  
     </article>
 
-    <?php get_sidebar(); ?><!-- 1024px以上で表示　スマホ・タブレットは表示なし -->
+    <?php get_sidebar(); ?>
 </main>
 
-<?php include ('inc/drawer.php');  ?>
 <?php get_footer(); ?>

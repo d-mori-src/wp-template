@@ -1,23 +1,4 @@
 .newShop {
-    h3 {
-        padding: 0 20px;
-        font-size: 14px;
-        font-family: 'Josefin Sans', sans-serif;
-        font-weight: 400;
-        img {
-            height: 10px;
-            margin: 0 14px 0 0;
-        }
-        &::after {
-            content: "";
-            display: block;
-            height: 4px;
-            margin: 4px 0 20px;
-            background-image: url(../img/common/underline.svg);
-            background-repeat: repeat-x;
-            background-size: contain;
-        }
-    }
     .shopItems {
         padding: 0 0 0 20px;
         display: flex;
@@ -69,9 +50,6 @@
         width: 640px;
         margin: 0 auto;
         padding: 0;
-        h3 {
-            padding: 0;
-        }
         .shopItems {
             padding: 0;
             .shopItem {
@@ -86,17 +64,6 @@
     }
     @media screen and (min-width:1024px) {
         width: 100%;
-        h3 {
-            font-size: 16px;
-            img {
-                height: 12px;
-                margin: 0 16px 0 0;
-            }
-            &::after {
-                height: 4px;
-                margin: 4px 0 8px;
-            }
-        }
         .shopItems {
             display: block;
             .shopItem {

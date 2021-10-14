@@ -29,13 +29,9 @@
     <link rel="stylesheet" href="<?= $uri ?>/css/bottomSlidein.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/header.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/footer.css">
-    <link rel="stylesheet" href="<?= $uri ?>/css/sidebar.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/hamburger.css">
-    <script src="<?= $uri ?>/js/jquery.3.4.1.js"></script>
     <link href="<?= $uri ?>/js/slick-theme.css" rel="stylesheet" type="text/css">
     <link href="<?= $uri ?>/js/slick.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="<?= $uri ?>/js/slick.min.js"></script>
-    <script src="<?= $uri ?>/js/thumb_slide.js"></script>
     <link rel="stylesheet" href="<?= $uri ?>/css/slide_orijinal.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,10 +43,10 @@
     <!-- 各ページcss -->
     <link rel="stylesheet" href="<?= $uri ?>/css/top.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/search.css">
-    <link rel="stylesheet" href="<?= $uri ?>/css/news.css">
-    <link rel="stylesheet" href="<?= $uri ?>/css/contact.css">
+    <link rel="stylesheet" href="<?= $uri ?>/css/newsDetail.css"><!-- single.php関連 -->
 
     <!-- 各コンポーネントcss -->
+    <link rel="stylesheet" href="<?= $uri ?>/css/news.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/new_shop.css">
     
     <?php wp_head(); ?>

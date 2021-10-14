@@ -1,6 +1,7 @@
-/* font-family: 'EB Garamond', serif; */
-/* font-family: 'Noto Sans JP', sans-serif; */
-/* font-family: 'Josefin Sans', sans-serif; */
+/* font */
+/* |- font-family: 'EB Garamond', serif; */
+/* |- font-family: 'Noto Sans JP', sans-serif; */
+/* |- font-family: 'Josefin Sans', sans-serif; */
 *, h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
@@ -26,6 +27,82 @@ ul li {
   letter-spacing: 1.5px;
 }
 
+.headTitle {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.headTitle img {
+  height: 10px;
+  margin: 0 14px 0 0;
+}
+
+.headTitle::after {
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 6px 0 20px;
+  background-image: url(../img/common/underline.svg);
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+  .headTitle {
+    font-size: 16px;
+  }
+  .headTitle img {
+    height: 12px;
+    margin: 0 16px 0 0;
+  }
+  .headTitle::after {
+    height: 4px;
+    margin: 8px 0 24px;
+  }
+}
+
+.sideHeadTitle {
+  padding: 0 20px;
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+.sideHeadTitle img {
+  height: 10px;
+  margin: 0 14px 0 0;
+}
+
+.sideHeadTitle::after {
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 4px 0 20px;
+  background-image: url(../img/common/underline.svg);
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+@media screen and (min-width: 768px) {
+  .sideHeadTitle {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sideHeadTitle {
+    font-size: 16px;
+  }
+  .sideHeadTitle img {
+    height: 12px;
+    margin: 0 16px 0 0;
+  }
+  .sideHeadTitle::after {
+    height: 4px;
+    margin: 4px 0 8px;
+  }
+}
+
 body {
   overflow-x: hidden;
   color: #474645;
@@ -36,8 +113,20 @@ body .sp-tab-newShop {
   display: block;
 }
 
+body main {
+  padding: 0 20px;
+}
+
 body main aside.sidebar {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body main {
+    width: 640px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -57,7 +146,6 @@ body main aside.sidebar {
   body main aside.sidebar {
     display: block;
     width: 24%;
-    border: 1px dashed #eee;
   }
 }
 

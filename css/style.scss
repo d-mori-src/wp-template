@@ -1,28 +1,75 @@
 @charset "utf-8";
-
-/* font-family: 'EB Garamond', serif; */
-/* font-family: 'Noto Sans JP', sans-serif; */
-/* font-family: 'Josefin Sans', sans-serif; */
+/* font */
+/* |- font-family: 'EB Garamond', serif; */
+/* |- font-family: 'Noto Sans JP', sans-serif; */
+/* |- font-family: 'Josefin Sans', sans-serif; */
 
 // 初期化
-*, h1, h2, h3, h4, h5, h6, p, a {
-    font-family: 'Noto Sans JP', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a {
-    text-decoration: none;
-    letter-spacing: 1.5px;
-    color: #474645;
-    transition: .5s;
-    &:hover {
-        opacity: .7;
+*, h1, h2, h3, h4, h5, h6, p, a { font-family: 'Noto Sans JP', sans-serif; margin: 0;padding: 0; box-sizing: border-box; }
+a { text-decoration: none; letter-spacing: 1.5px; color: #474645; transition: .5s; &:hover { opacity: .7; } }
+ul li { list-style: none; letter-spacing: 1.5px; }
+
+// 見出しタイトル
+.headTitle {
+    font-size: 14px;
+    font-weight: 400;
+    img {
+        height: 10px;
+        margin: 0 14px 0 0;
+    }
+    &::after {
+        content: "";
+        display: block;
+        height: 4px;
+        margin: 6px 0 20px;
+        background-image: url(../img/common/underline.svg);
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+    @media screen and (min-width:1024px) {
+        font-size: 16px;
+        img {
+            height: 12px;
+            margin: 0 16px 0 0;
+        }
+        &::after {
+            height: 4px;
+            margin: 8px 0 24px;
+        }
     }
 }
-ul li {
-    list-style: none;
-    letter-spacing: 1.5px;
+.sideHeadTitle {
+    padding: 0 20px;
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    img {
+        height: 10px;
+        margin: 0 14px 0 0;
+    }
+    &::after {
+        content: "";
+        display: block;
+        height: 4px;
+        margin: 4px 0 20px;
+        background-image: url(../img/common/underline.svg);
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+    @media screen and (min-width:768px) {
+        padding: 0;
+    }
+    @media screen and (min-width:1024px) {
+        font-size: 16px;
+        img {
+            height: 12px;
+            margin: 0 16px 0 0;
+        }
+        &::after {
+            height: 4px;
+            margin: 4px 0 8px;
+        }
+    }
 }
 
 // レイアウト共通
@@ -35,8 +82,16 @@ body {
     }
     // mainタグ共通処理
     main {
+        padding: 0 20px;
         aside.sidebar {
             display: none;
+        }
+    }
+    @media screen and (min-width:768px) {
+        main {
+            width: 640px;
+            margin: 0 auto;
+            padding: 0;
         }
     }
     @media screen and (min-width:1024px) {
@@ -51,7 +106,6 @@ body {
             aside.sidebar {
                 display: block;
                 width: 24%;
-                border: 1px dashed #eee;
             }
         }
     }
@@ -65,6 +119,7 @@ body {
     }
 }
 
+// 以下WordPress専用スタイル
 // currentクラスはactiveの場合自動で入る
 .pagenation {
     text-align: center;
@@ -139,6 +194,7 @@ body {
     }
 }
 
+// Instaプラグイン用
 // .instaWrapper {
 //     width: calc(100% - 50px);
 //     margin: 0 auto;
@@ -147,6 +203,7 @@ body {
 //     }
 // }
 
+// いいねプラグイン用
 // .like {
 //     display: flex;
 //     align-items: center;

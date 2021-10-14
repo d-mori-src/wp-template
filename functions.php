@@ -33,6 +33,17 @@ function create_post_type() {
             'menu_position' => 5,
         )
     );
+    register_post_type( 'special', // 投稿タイプ名の定義
+        array(
+            'labels' => array(
+            'name' => __( '特集記事' ), // 表示する投稿タイプ名
+            'singular_name' => __( '特集記事' )
+            ),
+            'public' => true,
+            'menu_position' => 5,
+            'supports' => array('title','editor','thumbnail'),
+        )
+    );
 
     // カスタム分類（タクソノミー）
     // register_post_type( 'products', /* カスタム投稿タイプスラッグ */

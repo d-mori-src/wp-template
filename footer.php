@@ -23,6 +23,9 @@
         </div>
     <?php wp_footer(); ?>
 
+    <script src="<?= $uri ?>/js/jquery.3.4.1.js"></script>
+    <script type="text/javascript" src="<?= $uri ?>/js/slick.min.js"></script>
+    <script src="<?= $uri ?>/js/thumb_slide.js"></script>
     <script src="<?= $uri ?>/js/main.js"></script>
     </body>
 </html>

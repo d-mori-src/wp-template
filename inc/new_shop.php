@@ -10,7 +10,7 @@
 ?>
 
 <section class="newShop">
-    <h3><img src="<?=$uri?>/img/common/new_shop.svg" alt="">NEW OPEN</h3>
+    <h3 class="sideHeadTitle"><img src="<?=$uri?>/img/common/new_shop.svg" alt="">NEW OPEN</h3>
 
     <div class="shopItems">
     <?php if ($wp_query_newShop->have_posts()): ?>
