@@ -43,11 +43,13 @@
     <!-- 各ページcss -->
     <link rel="stylesheet" href="<?= $uri ?>/css/top.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/search.css">
-    <link rel="stylesheet" href="<?= $uri ?>/css/newsDetail.css"><!-- single.php関連 -->
+    <link rel="stylesheet" href="<?= $uri ?>/css/news_detail.css"><!-- single.php関連 -->
 
     <!-- 各コンポーネントcss -->
     <link rel="stylesheet" href="<?= $uri ?>/css/news.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/new_shop.css">
+    <link rel="stylesheet" href="<?= $uri ?>/css/special.css">
+    <link rel="stylesheet" href="<?= $uri ?>/css/special_detail.css">
     
     <?php wp_head(); ?>
 </head>

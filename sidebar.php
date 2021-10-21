@@ -9,4 +9,5 @@
 
 <aside class="sidebar">
   <?php include('inc/new_shop.php'); ?>
+  <?php include('inc/special.php'); ?>
 </aside>

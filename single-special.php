@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<main class="newsDetail">
+<main class="newsDetail specialDetail">
     <!-- 左サイドバーをいれるばあいはここにラップして入れる -->
 
     <article>
-        <?php include('inc/news_detail.php'); ?>
+        <?php include('inc/special_detail.php'); ?>
     </article>
 
     <?php get_sidebar(); ?>

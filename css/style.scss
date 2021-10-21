@@ -6,7 +6,7 @@
 
 // 初期化
 *, h1, h2, h3, h4, h5, h6, p, a { font-family: 'Noto Sans JP', sans-serif; margin: 0;padding: 0; box-sizing: border-box; }
-a { text-decoration: none; letter-spacing: 1.5px; color: #474645; transition: .5s; &:hover { opacity: .7; } }
+a { text-decoration: none; letter-spacing: 1.5px; color: #454647; transition: .5s; &:hover { opacity: .7; } }
 ul li { list-style: none; letter-spacing: 1.5px; }
 
 // 見出しタイトル
@@ -77,7 +77,7 @@ body {
     overflow-x: hidden;
     color: #474645;
     background: #FDFDFD;
-    .sp-tab-newShop {
+    .sp-tab-contents {
         display: block;
     }
     // mainタグ共通処理
@@ -95,7 +95,7 @@ body {
         }
     }
     @media screen and (min-width:1024px) {
-        .sp-tab-newShop {
+        .sp-tab-contents {
             display: none;
         }
         main {

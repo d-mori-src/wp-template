@@ -17,11 +17,12 @@
     TOP - First View
 </section>
 
-<section class="sp-tab-newShop">
+<section class="sp-tab-contents">
     <?php include('inc/new_shop.php'); ?>
 </section>
 
 <main class="top">
+    <!-- 左サイドバーをいれるばあいはここにラップして入れる -->
     <article>
         <h3 class="headTitle"><img src="<?=$uri?>/img/common/check.svg" alt="">新着情報</h3>
         <section class="news">
@@ -78,7 +79,7 @@
     <?php get_sidebar(); ?>
 </main>
 
-<section class="sp-tab-newShop">
+<section class="sp-tab-contents">
     <?php include('inc/special.php'); ?>
 </section>
 

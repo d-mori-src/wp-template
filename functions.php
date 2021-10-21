@@ -41,7 +41,7 @@ function create_post_type() {
             ),
             'public' => true,
             'menu_position' => 5,
-            'supports' => array('title','editor','thumbnail'),
+            'supports' => array('title','editor'),
         )
     );
 
@@ -136,3 +136,8 @@ function my_custom_search_url() {
 	}
 }
 add_action( 'template_redirect', 'my_custom_search_url' );
+
+function filter_ptags_on_images($content){
+return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+add_filter('the_content', 'filter_ptags_on_images');

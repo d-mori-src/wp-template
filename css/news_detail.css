@@ -1,10 +1,10 @@
 .newsDetail {
-  margin: 104px auto 0;
+  margin: 80px auto 0;
 }
 
 .newsDetail .innerNewsDetail {
   text-align: justify;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .newsDetail .innerNewsDetail h1 {
@@ -94,8 +94,11 @@
 }
 
 @media screen and (min-width: 1120px) {
+  .newsDetail {
+    margin: 120px auto;
+  }
   .newsDetail .innerNewsDetail {
     width: 640px;
   }
 }
-/*# sourceMappingURL=newsDetail.css.map */
+/*# sourceMappingURL=news_detail.css.map */

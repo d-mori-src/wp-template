@@ -13,7 +13,7 @@
 a {
   text-decoration: none;
   letter-spacing: 1.5px;
-  color: #474645;
+  color: #454647;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -109,7 +109,7 @@ body {
   background: #FDFDFD;
 }
 
-body .sp-tab-newShop {
+body .sp-tab-contents {
   display: block;
 }
 
@@ -130,7 +130,7 @@ body main aside.sidebar {
 }
 
 @media screen and (min-width: 1024px) {
-  body .sp-tab-newShop {
+  body .sp-tab-contents {
     display: none;
   }
   body main {
