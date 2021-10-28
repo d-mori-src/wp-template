@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 
 <main class="newsDetail specialDetail">
-    <!-- 左サイドバーをいれるばあいはここにラップして入れる -->
+    <section class="leftSidebar">
+        leftSidebar
+    </section>
 
     <article>
         <?php include('inc/special_detail.php'); ?>

@@ -45,20 +45,14 @@
     }
     @media screen and (min-width:768px) {
         .innerNewsDetail {
-            width: 640px;
+            width: 100%;
             margin: 0 auto;
             padding: 0;
         }
     }
     @media screen and (min-width:1024px) {
-        .innerNewsDetail {
-            width: 600px;
-        }
     }
     @media screen and (min-width:1120px) {
         margin: 120px auto;
-        .innerNewsDetail {
-            width: 640px;
-        }
     }
 }

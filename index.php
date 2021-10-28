@@ -22,25 +22,33 @@
 </section>
 
 <main class="top">
-    <!-- 左サイドバーをいれるばあいはここにラップして入れる -->
+    <section class="leftSidebar">
+        leftSidebar
+    </section>
+
     <article>
         <h3 class="headTitle"><img src="<?=$uri?>/img/common/check.svg" alt="">新着情報</h3>
         <section class="news">
             <div class="newsItems">
                 <?php if ($wp_query->have_posts()): ?>
                     <?php while ($wp_query->have_posts()): $wp_query->the_post(); ?>
+                        <?php $cat = get_the_category(); $cat = $cat[0]; ?>
                         <div class="newsItem">
+                            <div class="titleWrapper">
+                                <a href="<?php the_permalink(); ?>" class="title <?=$cat->category_nicename; ?>">
+                                    <?=get_field('title_copy'); ?>
+                                </a>
+                                <a href="<?php the_permalink(); ?>" class="lead">
+                                    <?=mb_substr(get_field('sentence1'),0,62); ?> ...
+                                </a>
+                            </div>
+
                             <a href="<?php the_permalink(); ?>">
                                 <img src="<?php the_field('image'); ?>" class="newsItemImage" />
                             </a>
                             <div class="newsItemText">
-                                <a href="<?php the_permalink(); ?>" class="title">
-                                    <?=mb_substr(get_field('title_copy'),0,30); ?> ...
-                                </a>
-
                                 <div class="newsItemUnder">
                                     <div class="left-newsItemUnder">
-                                        <?php $cat = get_the_category(); $cat = $cat[0]; ?>
                                         <p class="<?=$cat->category_nicename; ?>"><?php the_category(' '); ?></p>
                                     </div>
                                     <div class="right-newsItemUnder">

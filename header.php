@@ -61,9 +61,9 @@
                         <img src="<?=$uri?>/img/common/logo.svg" class="logo" alt="logo">
                     </a>
                     <ul class="pc-navi">
-                        <li><a href="<?=$site_url;?>/"><span class="eventLink">EVENTS</span>イベント</a></li>
-                        <li><a href="<?=$site_url;?>/"><span class="groumetLink">GOURMETS</span>グルメ</a></li>
-                        <li><a href="<?=$site_url;?>/"><span class="newsLink">NEWS</span>ニュース</a></li>
+                        <li><a href="<?=$site_url;?>/search/イベント"><span class="eventLink">EVENTS</span>イベント</a></li>
+                        <li><a href="<?=$site_url;?>/search/グルメ"><span class="groumetLink">GOURMETS</span>グルメ</a></li>
+                        <li><a href="<?=$site_url;?>/search/ニュース"><span class="newsLink">NEWS</span>ニュース</a></li>
                         <li><a href="<?=$site_url;?>/"><span class="featureLink">FEATURES</span>特集記事</a></li>
                     </ul>
 

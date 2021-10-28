@@ -10,9 +10,14 @@
             }
         }
     }
-    @media screen and (min-width:1024px) {
+    @media screen and (min-width:768px) {
+        width: 640px;
+        margin: 0 auto;
         .specialItems {
             padding: 0;
         }
+    }
+    @media screen and (min-width:1024px) {
+        width: 100%;
     }
 }

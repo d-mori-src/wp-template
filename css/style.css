@@ -117,15 +117,29 @@ body main {
   padding: 0 20px;
 }
 
+body main .leftSidebar,
 body main aside.sidebar {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
   body main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 640px;
     margin: 0 auto;
     padding: 0;
+  }
+  body main .leftSidebar {
+    display: block;
+    width: 150px;
+  }
+  body main article {
+    width: 450px;
   }
 }
 
@@ -134,14 +148,11 @@ body main aside.sidebar {
     display: none;
   }
   body main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     width: 880px;
     margin: 0 auto;
+  }
+  body main .leftSidebar {
+    width: 130px;
   }
   body main aside.sidebar {
     display: block;

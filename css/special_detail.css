@@ -74,7 +74,7 @@
     margin: 80px auto;
   }
   .specialDetail .specialMainImage {
-    width: 640px;
+    width: 100%;
     height: auto;
     -o-object-fit: cover;
        object-fit: cover;
@@ -91,18 +91,9 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .specialDetail .specialMainImage {
-    width: 600px;
-  }
-}
-
 @media screen and (min-width: 1120px) {
   .specialDetail {
     margin: 120px auto;
-  }
-  .specialDetail .specialMainImage {
-    width: 640px;
   }
 }
 /*# sourceMappingURL=special_detail.css.map */

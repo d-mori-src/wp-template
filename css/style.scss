@@ -83,15 +83,25 @@ body {
     // mainタグ共通処理
     main {
         padding: 0 20px;
+        .leftSidebar,
         aside.sidebar {
             display: none;
         }
     }
     @media screen and (min-width:768px) {
         main {
+            display: flex;
+            justify-content: space-between;
             width: 640px;
             margin: 0 auto;
             padding: 0;
+            .leftSidebar {
+                display: block;
+                width: 150px;
+            }
+            article {
+                width: 450px;
+            }
         }
     }
     @media screen and (min-width:1024px) {
@@ -99,10 +109,11 @@ body {
             display: none;
         }
         main {
-            display: flex;
-            justify-content: space-between;
             width: 880px;
             margin: 0 auto;
+            .leftSidebar {
+                width: 130px;
+            }
             aside.sidebar {
                 display: block;
                 width: 24%;

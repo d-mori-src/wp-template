@@ -59,7 +59,7 @@
     @media screen and (min-width:768px) {
         margin: 80px auto;
         .specialMainImage {
-            width: 640px;
+            width: 100%;
             height: auto;
             object-fit: cover;
             margin: 0 0 24px 0;
@@ -75,14 +75,8 @@
         }
     }
     @media screen and (min-width:1024px) {
-        .specialMainImage {
-            width: 600px;
-        }
     }
     @media screen and (min-width:1120px) {
         margin: 120px auto;
-        .specialMainImage {
-            width: 640px;
-        }
     }
 }
