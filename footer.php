@@ -9,15 +9,12 @@
             <footer>
                 <div class="innerFooter">
                     <ul class="pc-footerNavi">
-                        <li><a href="<?=$site_url;?>/">イベント</a></li>
-                        <li><a href="<?=$site_url;?>/">グルメ</a></li>
-                        <li><a href="<?=$site_url;?>/">ニュース</a></li>
-                        <li><a href="<?=$site_url;?>/">特集</a></li>
-                        <li><a href="<?=$site_url;?>/">プレゼント応募</a></li>
-                        <li><a href="<?=$site_url;?>/">施設一覧</a></li>
-                        <li><a href="<?=$site_url;?>/">ご意見・ご要望</a></li>
+                        <li><a href="<?=$site_url;?>/questionnaire">ご意見・ご要望</a></li>
+                        <li><a href="<?=$site_url;?>/contribute">情報提供</a></li>
+                        <li><a href="<?=$site_url;?>/mail_magazine">メルマガ登録・解除</a></li>
+                        <li><a href="<?=$site_url;?>/advertisement">広告掲載のご案内</a></li>
                     </ul>
-                    <p class="copyright">Copyright<span>©</span><?=date("Y"); ?> KissPress, All rights reserved.</p>
+                    <p class="copyright">Copyright<span>©</span><?=date("Y"); ?> KissPress</p>
                 </div>
             </footer>
         </div>

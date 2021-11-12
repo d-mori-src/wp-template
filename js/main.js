@@ -118,4 +118,18 @@ $(function(){
         $(this).toggleClass('on-click');
         $('.sitemapHide').slideToggle(200);
     });
+
+    // modal
+    $('.js-modal-open').each(function(){
+        $(this).on('click',function(){
+            const target = $(this).data('target');
+            const modal = document.getElementById(target);
+            $(modal).fadeIn();
+            return false;
+        });
+    });
+    $('.js-modal-close').on('click',function(){
+        $('.js-modal').fadeOut();
+        return false;
+    });
 });

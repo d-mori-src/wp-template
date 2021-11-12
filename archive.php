@@ -1,51 +1,71 @@
-<?php 
-  $uri = get_theme_file_uri();
-  $site_url = site_url();
+<?php
+    $uri = get_theme_file_uri(); 
+    $site_url = site_url();
 ?>
 
 <?php get_header(); ?>
 
-<main class="news">
-    <h2>通常投稿一覧</h2>
+<section class="hero">
+    TOP - First View
+</section>
 
-    <ul>
-        <li class="cat-item"><a href="<?=$site_url;?>/posts">すべて</a></li>
-        <?php 
-            if (!is_page() && !is_home() && !is_single()){ 
-                $catsy = get_the_category();
-                $myCat = $catsy->cat_ID; $currentcategory = '&current_category='.$myCat; 
-            } elseif (is_single()){ 
-                $catsy = get_the_category(); 
-                $myCat = $catsy[0]->cat_ID; $currentcategory = '&current_category='.$myCat; 
-            } 
-            wp_list_categories('depth=1&title_li='.$currentcategory); 
-        ?><!-- 最終<li>タグで書き出し -->
-    </ul>
+<main class="top">
+    <?php include('inc/left_sidebar.php'); ?>
 
-    <?php if (have_posts()): ?>
-        <?php while (have_posts()): ?>
-            <?php the_post(); ?>
-            <div>
-                <a href="<?php the_permalink(); ?>">
-                <?php the_title(); ?>
-                </a>
+    <article>
+        <h3 class="headTitle"><img src="<?=$uri?>/img/common/check.svg" alt="">新着情報</h3>
+    
+        <!-- <ul>
+            <li class="cat-item"><a href="<?=$site_url;?>/posts">すべて</a></li>
+            <?php 
+                if (!is_page() && !is_home() && !is_single()){ 
+                    $catsy = get_the_category();
+                    $myCat = $catsy->cat_ID; $currentcategory = '&current_category='.$myCat; 
+                } elseif (is_single()){ 
+                    $catsy = get_the_category(); 
+                    $myCat = $catsy[0]->cat_ID; $currentcategory = '&current_category='.$myCat; 
+                } 
+                wp_list_categories('depth=1&title_li='.$currentcategory); 
+            ?>
+        </ul> -->
+
+        <section class="news">
+            <div class="newsItems">
+                <?php if (have_posts()): ?>
+                    <?php while (have_posts()): the_post(); ?>
+                        <?php $cat = get_the_category(); $cat = $cat[0]; ?>
+                        <div class="newsItem">
+                            <div class="titleWrapper">
+                                <a href="<?php the_permalink(); ?>" class="title <?=$cat->category_nicename; ?>">
+                                    <?=get_field('title_copy'); ?>
+                                </a>
+                                <a href="<?php the_permalink(); ?>" class="lead">
+                                    <?=mb_substr(get_field('sentence1'),0,62); ?> ...
+                                </a>
+                            </div>
+
+                            <a href="<?php the_permalink(); ?>">
+                                <img src="<?php the_field('image'); ?>" class="newsItemImage" />
+                            </a>
+                            <div class="newsItemText">
+                                <div class="newsItemUnder">
+                                    <div class="left-newsItemUnder">
+                                        <p class="<?=$cat->category_nicename; ?>"><?php the_category(' '); ?></p>
+                                    </div>
+                                    <div class="right-newsItemUnder">
+                                        <p class="timestamp"><?=human_time_diff(get_the_time('U'),current_time('timestamp')).'前'; ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php else: ?>
+                    <p>まだ投稿がありません。</p>
+                <?php endif; ?>
             </div>
-        <?php endwhile; ?>
-    <?php else: ?>
-        投稿がありません
-    <?php endif; ?>
-
-    <div>ページネーション件数は管理画面から設定可能</div>
-    <?php previous_posts_link('prev'); ?>
-    <?php
-        $pagination = [
-            'prev_text' => false,
-            'next_text' => false,
-        ];
-        the_posts_pagination($pagination);
-    ?>
-    <?php next_posts_link('next'); ?>
+        </section>
+    </article> 
+    <?php get_sidebar(); ?>
 </main>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

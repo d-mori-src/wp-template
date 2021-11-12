@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 
 <main class="newsDetail">
-    <section class="leftSidebar">
-        leftSidebar
-    </section>
+    <?php include('inc/left_sidebar.php'); ?>
 
     <article>
         <?php include('inc/news_detail.php'); ?>

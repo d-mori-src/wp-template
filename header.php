@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="<?= $uri ?>/css/header.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/footer.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/hamburger.css">
+    <link rel="stylesheet" href="<?= $uri ?>/css/modal.css">
     <link href="<?= $uri ?>/js/slick-theme.css" rel="stylesheet" type="text/css">
     <link href="<?= $uri ?>/js/slick.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<?= $uri ?>/css/slide_orijinal.css">
@@ -39,6 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- 各ページcss -->
     <link rel="stylesheet" href="<?= $uri ?>/css/top.css">
@@ -50,7 +52,12 @@
     <link rel="stylesheet" href="<?= $uri ?>/css/new_shop.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/special.css">
     <link rel="stylesheet" href="<?= $uri ?>/css/special_detail.css">
-    
+    <link rel="stylesheet" href="<?= $uri ?>/css/advertisement.css">
+    <link rel="stylesheet" href="<?= $uri ?>/css/present.css">
+    <link rel="stylesheet" href="<?= $uri ?>/css/institution.css">
+    <link rel="stylesheet" href="<?= $uri ?>/css/mail_magazine.css">
+    <link rel="stylesheet" href="<?= $uri ?>/css/contact.css">
+
     <?php wp_head(); ?>
 </head>
     <body>

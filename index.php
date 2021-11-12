@@ -6,7 +6,7 @@
     $args = [
         'post_type' => 'post', // カスタム投稿名
         'paged' => $paged,
-        'posts_per_page' => 9, // 表示する数
+        'posts_per_page' => 9, // 表示する数 -1 = 全件表示
     ];
     $wp_query = new WP_Query($args);
 ?>
@@ -17,14 +17,16 @@
     TOP - First View
 </section>
 
-<section class="sp-tab-contents">
+<!-- <section class="sp-tab-contents">
     <?php include('inc/new_shop.php'); ?>
 </section>
 
+<section class="sp-tab-contents">
+    <?php include('inc/special.php'); ?>
+</section> -->
+
 <main class="top">
-    <section class="leftSidebar">
-        leftSidebar
-    </section>
+    <?php include('inc/left_sidebar.php'); ?>
 
     <article>
         <h3 class="headTitle"><img src="<?=$uri?>/img/common/check.svg" alt="">新着情報</h3>
@@ -86,9 +88,5 @@
     </article> 
     <?php get_sidebar(); ?>
 </main>
-
-<section class="sp-tab-contents">
-    <?php include('inc/special.php'); ?>
-</section>
 
 <?php get_footer(); ?>

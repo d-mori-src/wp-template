@@ -2,6 +2,12 @@
   margin: 104px auto 0;
 }
 
+@media screen and (min-width: 1120px) {
+  .search {
+    margin: 120px auto 0;
+  }
+}
+
 .pc-searchForm {
   display: none;
 }
