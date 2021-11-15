@@ -108,5 +108,50 @@
             </header>
 
             <nav id="nav">
-                ナビメニューが入ります。
+                <section class="innerNav">
+                    <a href="<?=$site_url;?>" class="topNavLink">トップページ</a>
+                    <ul class="navLink">
+                        <li><a href=""><img src="<?=$uri?>/img/hamburger/ivent.svg" alt="イベント">イベント</a></li>
+                        <li><a href=""><img src="<?=$uri?>/img/hamburger/gourmet.svg" alt="グルメ">グルメ</a></li>
+                        <li><a href=""><img src="<?=$uri?>/img/hamburger/sweets.svg" alt="スイーツ">スイーツ</a></li>
+                        <li><a href=""><img src="<?=$uri?>/img/hamburger/family.svg" alt="ファミリー">ファミリー</a></li>
+                        <li><a href=""><img src="<?=$uri?>/img/hamburger/weekend.svg" alt="今週末">今週末</a></li>
+                        <li><a href=""><img src="<?=$uri?>/img/hamburger/present.svg" alt="プレゼント応募">プレゼント応募</a></li>
+                    </ul>
+                    
+                    <div class="pcFlex">
+                        <div class="tagLinkWrapper">
+                            <h4>話題のタグ</h4>
+                            <ul class="tagLink">
+                                <li><a href=""><span>#</span>秋</a></li>
+                                <li><a href=""><span>#</span>紅葉狩り</a></li>
+                                <li><a href=""><span>#</span>体験レポ</a></li>
+                                <li><a href=""><span>#</span>パン</a></li>
+                                <li><a href=""><span>#</span>アート</a></li>
+                                <li><a href=""><span>#</span>絶景</a></li>
+                            </ul>
+                        </div>
+                        <ul class="pcAnotherLink">
+                            <li><a href="">メルマガ登録・解除</a></li>
+                            <li><a href="">施設一覧</a></li>
+                            <li><a href="">情報提供</a></li>
+                            <li><a href="">ご意見・ご要望</a></li>
+                            <li><a href="">広告掲載のご案内</a></li>
+                        </ul>
+                    </div>
+                    <ul class="snsLink">
+                        <li><a href=""><img src="<?=$uri?>/img/common/fb.svg" alt="Facebook"></a></li>
+                        <li><a href=""><img src="<?=$uri?>/img/common/tw.svg" alt="Twitter"></a></li>
+                        <li><a href=""><img src="<?=$uri?>/img/common/insta.svg" alt="INSTAGRAM"></a></li>
+                        <li><a href=""><img src="<?=$uri?>/img/common/line.svg" alt="LINE"></a></li>
+                    </ul>
+                    <ul class="spAnotherLink">
+                        <li><a href="">メルマガ登録・解除</a></li>
+                        <li><a href="">施設一覧</a></li>
+                        <li><a href="">情報提供</a></li>
+                        <li><a href="">ご意見・ご要望</a></li>
+                        <li><a href="">広告掲載のご案内</a></li>
+                    </ul>
+                </section>
+                
             </nav>
